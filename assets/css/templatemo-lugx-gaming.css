@@ -1553,12 +1553,14 @@ Contact PAge Style
   margin-bottom: 30px;
 }
 
+/*Send message button*/
 .contact-page .right-content form button {
   display: inline-block;
   height: 50px;
   line-height: 50px;
   background-color: #ee626b;
   color: #fff;
+  width: 37rem;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 500;
