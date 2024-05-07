@@ -1574,6 +1574,33 @@ Contact PAge Style
   background-color: #0071f8;
 }
 
+/*Sign up Buttons*/
+.signup{
+  width: 25%;
+  height: 30px;
+  border-radius: 25px;
+  padding: 20px 20px;
+  background-color: #f7f7f7;
+  border: 1px solid #e7e7e7;
+  font-size: 14px;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+.submit{
+
+  width: 5%;
+  border-radius: 25px;
+  border: 1px solid #e7e7e7;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+
+
+
+
+
 /* 
 ---------------------------------------------
 Responsive Style
