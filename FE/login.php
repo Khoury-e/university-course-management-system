@@ -42,6 +42,7 @@
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="#">Sign In </a></li>
+              <li><a href="signup.html">Sign Up</a></li> <!-- Added Sign Up link -->
             </ul>
             <!-- ***** Menu End ***** -->
           </nav>
@@ -79,8 +80,7 @@
                       <fieldset>
                         <input type="password" name="password" id="password" placeholder="Password" required>
                       </fieldset>
-                      Not registered?
-
+                      Not registered? <a href="signup.html">Sign Up</a> <!-- Added Sign Up link -->
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
