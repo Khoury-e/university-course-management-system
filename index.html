@@ -418,5 +418,22 @@ https://templatemo.com/tm-589-lugx-gaming
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
 
+ <!--Success Message when form Submitted Successdully-->>
+  <script>
+    window.onload = function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+        const failure = urlParams.get('failure');
+    
+        if (success) {
+            alert('Form submitted successfully!');
+        }
+      } else if (failure) {
+      alert('Form submission failed. Please try again later.');
+      }
+    ;
+</script>
+
+
   </body>
 </html>
