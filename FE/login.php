@@ -79,6 +79,8 @@
                       <fieldset>
                         <input type="password" name="password" id="password" placeholder="Password" required>
                       </fieldset>
+                      Not registered?
+
                     </div>
                     <div class="col-lg-12">
                       <fieldset>

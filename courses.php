@@ -60,7 +60,7 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="shop.html" class="active">Courses</a></li>
                       <li><a href="product-details.html">Product Details</a></li>
                       <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="#">Sign In</a></li>
+                      <li><a href="FE/login.php">Sign In</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>

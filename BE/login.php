@@ -18,7 +18,7 @@ $rowCount = $stmt->rowCount();
 if ($rowCount > 0) { // Successful login
     session_start();
     $_SESSION["username"] = $UserName;
-    header("Location: ../index.html");
+    header("Location: displayCoursesAdmin.php");
     exit();
 } else {
     header("Location: ../index.html?error=invalid_credentials");
