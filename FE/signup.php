@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <title>Sign In (Admins Only)</title>
+  <title>Sign Up (Admins Only)</title>
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Additional CSS Files -->
@@ -41,7 +41,7 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="#">Sign In </a></li>
+              <li><a href="login.php">Sign In </a></li>
               <li><a href="signup.php">Sign Up</a></li> <!-- Added Sign Up link -->
             </ul>
             <!-- ***** Menu End ***** -->
@@ -56,7 +56,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h3>Sign In (Admins Only)</h3>
+          <h3>Sign Up (Admins Only)</h3>
         </div>
       </div>
     </div>
@@ -69,7 +69,7 @@
           <div class="right-content">
             <div class="row">
               <div class="col-lg-12">
-                <form id="login-form" action="../BE/login.php" method="post">
+                <form id="login-form" action="../BE/signup.php" method="post">
                   <div class="row">
                     <div class="col-lg-12">
                       <fieldset>
@@ -80,11 +80,11 @@
                       <fieldset>
                         <input type="password" name="password" id="password" placeholder="Password" required>
                       </fieldset>
-                      Not registered? <a href="signup.php">Sign Up</a> <!-- Added Sign Up link -->
+                      Already Have An Account? <a href="login.php">Sign In</a> 
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="login-submit" class="orange-button">Sign In</button>
+                        <button type="submit" id="signup-submit" class="orange-button">Sign Up</button>
                       </fieldset>
                     </div>
                   </div>
