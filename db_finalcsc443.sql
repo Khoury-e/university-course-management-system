@@ -1,11 +1,11 @@
- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: May 07, 2024 at 10:30 AM
--- Server version: 8.2.0
--- PHP Version: 8.2.13
+-- Host: 127.0.0.1
+-- Generation Time: May 08, 2024 at 05:37 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -27,14 +27,26 @@ SET time_zone = "+00:00";
 -- Table structure for table `courses`
 --
 
-DROP TABLE IF EXISTS `courses`;
-CREATE TABLE IF NOT EXISTS `courses` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `COURSENAME` varchar(50) COLLATE latin1_general_ci NOT NULL,
-  `DESCRIPTION` varchar(250) COLLATE latin1_general_ci NOT NULL,
-  `IS_ACTIVE` int NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+CREATE TABLE `courses` (
+  `ID` int(11) NOT NULL,
+  `COURSENAME` varchar(50) NOT NULL,
+  `DESCRIPTION` varchar(250) NOT NULL,
+  `IS_ACTIVE` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+--
+-- Dumping data for table `courses`
+--
+
+INSERT INTO `courses` (`ID`, `COURSENAME`, `DESCRIPTION`, `IS_ACTIVE`) VALUES
+(1, 'CSC443', 'Web Programming', 1),
+(2, 'CSC437', 'Network Security', 1),
+(3, 'CSC447', 'Parallel Programming', 1),
+(4, 'CSC435', 'Computer Security', 1),
+(5, 'CSC433', 'Cloud', 1),
+(6, 'CSC245', 'CP2', 0),
+(7, 'CSC243CP1', 'CP1', 0),
+(8, 'MTH307', 'DS2', 1);
 
 -- --------------------------------------------------------
 
@@ -42,15 +54,13 @@ CREATE TABLE IF NOT EXISTS `courses` (
 -- Table structure for table `table_contacts`
 --
 
-DROP TABLE IF EXISTS `table_contacts`;
-CREATE TABLE IF NOT EXISTS `table_contacts` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `PHONE` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  `EMAIL` varchar(50) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  `SUBJECT` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  `BODY` varchar(250) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+CREATE TABLE `table_contacts` (
+  `ID` int(11) NOT NULL,
+  `PHONE` varchar(20) NOT NULL,
+  `EMAIL` varchar(50) NOT NULL,
+  `SUBJECT` varchar(20) NOT NULL,
+  `BODY` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
 
@@ -58,21 +68,62 @@ CREATE TABLE IF NOT EXISTS `table_contacts` (
 -- Table structure for table `tbl_users`
 --
 
-DROP TABLE IF EXISTS `tbl_users`;
-CREATE TABLE IF NOT EXISTS `tbl_users` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `USERNAME` varchar(20) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
-  `PASSWORD` varchar(350) COLLATE latin1_general_ci NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+CREATE TABLE `tbl_users` (
+  `ID` int(11) NOT NULL,
+  `USERNAME` varchar(20) NOT NULL,
+  `PASSWORD` varchar(350) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Dumping data for table `tbl_users`
 --
 
 INSERT INTO `tbl_users` (`ID`, `USERNAME`, `PASSWORD`) VALUES
-(1, 'admin', 'password'),
-(2, 'tester', 'pass');
+(3, 'khouryelias', 'pass123');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `courses`
+--
+ALTER TABLE `courses`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `table_contacts`
+--
+ALTER TABLE `table_contacts`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `courses`
+--
+ALTER TABLE `courses`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `table_contacts`
+--
+ALTER TABLE `table_contacts`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

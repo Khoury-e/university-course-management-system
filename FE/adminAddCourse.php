@@ -28,7 +28,23 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="#">Sign In </a></li>
+              <li><a href="adminAddCourse.php">Add Courses</a></li>
+              <li><a href="../BE/displayCoursesAdmin.php" class="active">View Courses</a></li>
+              <li><a href="../BE/logout.php">Log Out</a></li>
+              <?php
+                  session_start();
+                  if(isset($_SESSION['username'])) {
+                      $username = $_SESSION['username'];
+                      echo '<li>
+                              <div class="welcome-msg" id="welcomeMsg">
+                                  Welcome '.$username.'!
+                              </div>
+                          </li>';
+                  } else {
+                      header('Location: ../FE/login.php');
+                      exit;
+                  }
+                ?>
             </ul>
             <!-- ***** Menu End ***** -->
           </nav>
@@ -55,7 +71,7 @@
           <div class="right-content">
             <div class="row">
               <div class="col-lg-12">
-                <form id="login-form" action="../BE/addCourse.php" method="post">
+                <form id="login-form" action="../BE/addCourse.php" method="post" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-lg-12">
                       <fieldset>
@@ -67,9 +83,13 @@
                         <input type="text" name="courseDescription" id="description" placeholder="Course Description" required>
                       </fieldset>
                     </div>
+                    <div class='col-lg-12'>
+                        Select image to upload:
+                        <input type="file" accept="image/*" name="image" id="file"> 
+                    </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="login-submit" class="orange-button">Add Course</button>
+                        <button type="submit" id="add-course-submit" class="orange-button">Add Course</button>
                       </fieldset>
                     </div>
                   </div>

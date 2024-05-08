@@ -55,7 +55,7 @@ https://templatemo.com/tm-589-lugx-gaming
                 <nav class="main-nav">
                     <!-- ** Logo Start ** -->
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                        <img src="../assets/images/logo.png" alt="" style="width: 158px;">
                     </a>
                     <!-- ** Logo End ** -->
                     <!-- ** Menu Start ** -->
@@ -63,7 +63,20 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="../FE/adminAddCourse.php">Add Courses</a></li>
                       <li><a href="displayCoursesAdmin.php" class="active">View Courses</a></li>
                       <li><a href="logout.php">Log Out</a></li>
-                      <li><a href="#">Sign In</a></li>
+                      <?php
+                        session_start();
+                        if(isset($_SESSION['username'])) {
+                            $username = $_SESSION['username'];
+                            echo '<li>
+                                    <div class="welcome-msg" id="welcomeMsg">
+                                        Welcome '.$username.'!
+                                    </div>
+                                </li>';
+                        } else {
+                            header('Location: ../FE/login.php');
+                            exit;
+                        }
+                      ?>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -82,16 +95,16 @@ https://templatemo.com/tm-589-lugx-gaming
             echo "<div class='col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv'>";
             echo "<div class='item'>";
             echo "<div class='thumb'>";
-            echo '<a href="product-details.html"><img src="../assets/images/trending-01.jpg" alt=""></a>';
+            echo '<a href="../product-details.html"><img src="../assets/images/'.$row['ID'].'.jpeg" alt=""></a>';
+            echo "</div>";
             echo "<div class='down-content'>";
             echo "<h4>".$row['COURSENAME']."</h4>";
             echo $row['IS_ACTIVE'] ? 'Active' : 'Inactive';
             if ($row['IS_ACTIVE']) {
-                echo "<a href='course_status.php?courseId=" . $row['ID'] . "'>Deactivate</a>";
+                echo "<a id='activation' href='course_status.php?courseId=" . $row['ID'] . "'>Deactivate</a>";
             } else {
-                echo "<a href='course_status.php?courseId=" . $row['ID'] . "'>Activate</a>";
+                echo "<a id='activation' href='course_status.php?courseId=" . $row['ID'] . "'>Activate</a>";
             }
-            echo "</div>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
