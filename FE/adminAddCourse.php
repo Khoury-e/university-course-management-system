@@ -35,11 +35,11 @@
                   session_start();
                   if(isset($_SESSION['username'])) {
                       $username = $_SESSION['username'];
-                      echo '<header>
+                      echo '<li>
                               <div class="welcome-msg" id="welcomeMsg">
                                   Welcome '.$username.'!
                               </div>
-                          </header>';
+                          </li>';
                   } else {
                       header('Location: login.php');
                       exit;
@@ -85,7 +85,7 @@
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="login-submit" class="orange-button">Add Course</button>
+                        <button type="submit" id="add-course-submit" class="orange-button">Add Course</button>
                       </fieldset>
                     </div>
                   </div>

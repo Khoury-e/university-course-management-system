@@ -67,11 +67,11 @@ https://templatemo.com/tm-589-lugx-gaming
                         session_start();
                         if(isset($_SESSION['username'])) {
                             $username = $_SESSION['username'];
-                            echo '<header>
+                            echo '<li>
                                     <div class="welcome-msg" id="welcomeMsg">
                                         Welcome '.$username.'!
                                     </div>
-                                </header>';
+                                </li>';
                         } else {
                             header('Location: login.php');
                             exit;
