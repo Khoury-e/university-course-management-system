@@ -19,7 +19,7 @@
             echo "<div class='col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv'>";
             echo "<div class='item'>";
             echo "<div class='thumb'>";
-            echo '<a href="assets/images/'.$course->id.'.jpeg"><img src="assets/images/'.$course->id.'.jpeg" alt=""></a>';
+            echo '<a href="../assets/images/'.$course->id.'.jpeg"><img src="../assets/images/'.$course->id.'.jpeg" alt=""></a>';
             echo "</div>";
             echo "<div class='down-content'>";
             echo "<h4>".$course->coursename."</h4>";
