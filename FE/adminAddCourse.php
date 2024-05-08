@@ -31,6 +31,20 @@
               <li><a href="adminAddCourse.php">Add Courses</a></li>
               <li><a href="../BE/displayCoursesAdmin.php" class="active">View Courses</a></li>
               <li><a href="../BE/logout.php">Log Out</a></li>
+              <?php
+                  session_start();
+                  if(isset($_SESSION['username'])) {
+                      $username = $_SESSION['username'];
+                      echo '<header>
+                              <div class="welcome-msg" id="welcomeMsg">
+                                  Welcome '.$username.'!
+                              </div>
+                          </header>';
+                  } else {
+                      header('Location: login.php');
+                      exit;
+                  }
+                ?>
             </ul>
             <!-- ***** Menu End ***** -->
           </nav>

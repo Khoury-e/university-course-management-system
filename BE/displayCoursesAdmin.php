@@ -63,6 +63,20 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="../FE/adminAddCourse.php">Add Courses</a></li>
                       <li><a href="displayCoursesAdmin.php" class="active">View Courses</a></li>
                       <li><a href="logout.php">Log Out</a></li>
+                      <?php
+                        session_start();
+                        if(isset($_SESSION['username'])) {
+                            $username = $_SESSION['username'];
+                            echo '<header>
+                                    <div class="welcome-msg" id="welcomeMsg">
+                                        Welcome '.$username.'!
+                                    </div>
+                                </header>';
+                        } else {
+                            header('Location: login.php');
+                            exit;
+                        }
+                      ?>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
