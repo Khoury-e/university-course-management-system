@@ -63,7 +63,6 @@ https://templatemo.com/tm-589-lugx-gaming
                       <li><a href="../FE/adminAddCourse.php">Add Courses</a></li>
                       <li><a href="displayCoursesAdmin.php" class="active">View Courses</a></li>
                       <li><a href="logout.php">Log Out</a></li>
-                      <li><a href="#">Sign In</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>

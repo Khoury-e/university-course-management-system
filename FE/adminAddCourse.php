@@ -28,7 +28,9 @@
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="#">Sign In </a></li>
+              <li><a href="adminAddCourse.php">Add Courses</a></li>
+              <li><a href="../BE/displayCoursesAdmin.php" class="active">View Courses</a></li>
+              <li><a href="../BE/logout.php">Log Out</a></li>
             </ul>
             <!-- ***** Menu End ***** -->
           </nav>
