@@ -95,7 +95,7 @@ https://templatemo.com/tm-589-lugx-gaming
             echo "<div class='col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv'>";
             echo "<div class='item'>";
             echo "<div class='thumb'>";
-            echo '<a href="../product-details.html"><img src="../assets/images/'.$row['ID'].'.jpeg" alt=""></a>';
+            echo '<a href="../assets/images/'.$row['ID'].'.jpeg"><img src="../assets/images/'.$row['ID'].'.jpeg" alt=""></a>';
             echo "</div>";
             echo "<div class='down-content'>";
             echo "<h4>".$row['COURSENAME']."</h4>";
