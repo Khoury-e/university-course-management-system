@@ -41,7 +41,7 @@
                               </div>
                           </li>';
                   } else {
-                      header('Location: login.php');
+                      header('Location: ../FE/login.php');
                       exit;
                   }
                 ?>
@@ -71,7 +71,7 @@
           <div class="right-content">
             <div class="row">
               <div class="col-lg-12">
-                <form id="login-form" action="../BE/addCourse.php" method="post">
+                <form id="login-form" action="../BE/addCourse.php" method="post" enctype="multipart/form-data">
                   <div class="row">
                     <div class="col-lg-12">
                       <fieldset>
@@ -82,6 +82,10 @@
                       <fieldset>
                         <input type="text" name="courseDescription" id="description" placeholder="Course Description" required>
                       </fieldset>
+                    </div>
+                    <div class='col-lg-12'>
+                        Select image to upload:
+                        <input type="file" accept="image/*" name="image" id="file"> 
                     </div>
                     <div class="col-lg-12">
                       <fieldset>
