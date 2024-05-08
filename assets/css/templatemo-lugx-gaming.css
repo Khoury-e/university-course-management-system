@@ -860,7 +860,7 @@ Trending Style
 }
 
 .trending .item .down-content {
-  padding: 50px;
+  padding: 20px;
 }
 
 .trending .item .down-content span.category {
@@ -1596,7 +1596,11 @@ Contact PAge Style
   color: #4a4a4a;
 }
 
-
+#activation {
+  color: black;
+  background: none;
+  padding: 10px;
+}
 
 
 

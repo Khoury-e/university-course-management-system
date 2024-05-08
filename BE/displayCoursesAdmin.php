@@ -82,16 +82,16 @@ https://templatemo.com/tm-589-lugx-gaming
             echo "<div class='col-lg-3 col-md-6 align-self-center mb-30 trending-items col-md-6 adv'>";
             echo "<div class='item'>";
             echo "<div class='thumb'>";
-            echo '<a href="product-details.html"><img src="../assets/images/trending-01.jpg" alt=""></a>';
+            echo '<a href="../product-details.html"><img src="../assets/images/trending-01.jpg" alt=""></a>';
+            echo "</div>";
             echo "<div class='down-content'>";
             echo "<h4>".$row['COURSENAME']."</h4>";
             echo $row['IS_ACTIVE'] ? 'Active' : 'Inactive';
             if ($row['IS_ACTIVE']) {
-                echo "<a href='course_status.php?courseId=" . $row['ID'] . "'>Deactivate</a>";
+                echo "<a id='activation' href='course_status.php?courseId=" . $row['ID'] . "'>Deactivate</a>";
             } else {
-                echo "<a href='course_status.php?courseId=" . $row['ID'] . "'>Activate</a>";
+                echo "<a id='activation' href='course_status.php?courseId=" . $row['ID'] . "'>Activate</a>";
             }
-            echo "</div>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
