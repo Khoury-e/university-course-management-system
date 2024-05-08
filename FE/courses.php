@@ -10,14 +10,14 @@
     <title>Course Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="../assets/css/owl.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 <!--
 
@@ -50,17 +50,17 @@ https://templatemo.com/tm-589-lugx-gaming
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.svg" alt="" style="width: 158px;">
+                    <a href="../index.html" class="logo">
+                        <img src="../assets/images/logo.svg" alt="" style="width: 158px;">
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
+                      <li><a href="../index.html">Home</a></li>
                       <li><a href="#" class="active">Courses</a></li>
-                      <li><a href="FE/aboutus.html">About Us</a></li>
+                      <li><a href="aboutus.html">About Us</a></li>
                       <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="FE/login.php">Sign In</a></li>
+                      <li><a href="login.php">Sign In</a></li>
                   </ul>   
                     <a class='menu-trigger'>
                         <span>Menu</span>
@@ -88,7 +88,7 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="container">
       <div class="row trending-box">
         <?php 
-          include("BE/allCourses.php");
+          include("../BE/allCourses.php");
         ?>
       </div>
       <div class="row">
@@ -115,12 +115,12 @@ https://templatemo.com/tm-589-lugx-gaming
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../assets/js/isotope.min.js"></script>
+  <script src="../assets/js/owl-carousel.js"></script>
+  <script src="../assets/js/counter.js"></script>
+  <script src="../assets/js/custom.js"></script>
 
   </body>
 </html>
